@@ -1,0 +1,36 @@
+---
+title: "chapter 1 (based on Roger Peng's video in youTube"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. 我嘗試用中文寫文章，看看效果如何。
+
+前言
+
+维基百科，自由的百科全书
+
+
+仿真或译作模拟（英语：Simulation），泛指基于实验或训练为目的，将原本的真实或抽象的系统、事务或流程，建立一个模型以表征其关键特性（keycharacteristics）或者行为、功能，予以系统化与公式化，以便进行可对关键特征做出模拟。模型表示系统自身，而仿真表示系统的时序行为。
+
+计算机试验常被用来研究仿真模型（simulation-model）。仿真也被用于对自然系统或人造系统的科学建模以获取深入理解。仿真可以用来展示可选条件或动作过程的最终结果。仿真也可用在真实系统不能做到的情景，这是由于不可访问（accessible）、太过于危险、不可接受的后果、或者设计了但还未实现、或者压根没有被实现等。 仿真的主要论题是获取相关选定的关键特性与行为的有效信息源，仿真时使用简化的近似或者假定，仿真结果的保真度（fidelity）与有效性。模型验证（verification）与有效性（validation）的过程、协议是学术学习、改进、研究、开发仿真技术的热点，特别是对计算机仿真。
+
+仿真保真度（Simulation Fidelity）用于描述仿真精度，模拟真实对应物有多近似：
+
+* 低保真：对系统的最小模拟，接受输入产生输出
+* 等保真：对刺激能自动响应，有限精度
+* 高保真：接近不可辨识或者尽可能地接近真实系统
+
+在中国，自动控制领域把simulation翻译为仿真，emulation翻译为模拟。例如：核电站仿真、电厂仿真等等。而2002年全国科学技术名词审定委员会公布出版的《计算机科学技术名词》（第二版）[2]把simulation翻译为模拟，emulation翻译为仿真。这造成了极大的混淆。
+
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

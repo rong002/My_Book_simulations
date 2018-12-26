@@ -7,7 +7,7 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. 我嘗試用中�
 
 前言
 
-维基百科，自由的百科全书
+[维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E4%BB%BF%E7%9C%9F)
 
 
 仿真或译作模拟（英语：Simulation），泛指基于实验或训练为目的，将原本的真实或抽象的系统、事务或流程，建立一个模型以表征其关键特性（keycharacteristics）或者行为、功能，予以系统化与公式化，以便进行可对关键特征做出模拟。模型表示系统自身，而仿真表示系统的时序行为。
@@ -22,15 +22,61 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. 我嘗試用中�
 
 在中国，自动控制领域把simulation翻译为仿真，emulation翻译为模拟。例如：核电站仿真、电厂仿真等等。而2002年全国科学技术名词审定委员会公布出版的《计算机科学技术名词》（第二版）[2]把simulation翻译为模拟，emulation翻译为仿真。这造成了极大的混淆。
 
+[Simulation in R](https://www.youtube.com/watch?v=tvv4IA8PEzw)
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+* `d` 函數表示它是關於 **probability density**
+
+* `r` 函數表示它是關於 **random number generation**
+
+* `p` 函數表示它是關於 **probability cumulative distribution**
+
+* `q` 函數表示它是關於 **probability quantile function**
+
+現在進入`Roger Peng`的大作。。。
+
+Generate Normal Random Variate
+
 
 ```{r}
-plot(cars)
+x<-rnorm(10)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+```{r}
+x
+```
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+如果我要10只變數而它們的`mean`大概是`20`和`standard deviation`是`2`：
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+x<-rnorm(10, 20, 2)
+```
+
+```{r}
+x
+```
+
+```{r}
+summary(x)
+```
+
+用`set.seed`來固定`random variable seed`以保證`reproducibility`
+
+```{r}
+set.seed(1)
+```
+
+```{r}
+rnorm(5)
+```
+
+```{r}
+rnorm(5)
+```
+
+```{r}
+set.seed(1)
+rnorm(5)
+```
+
+不知那裏出錯！
+

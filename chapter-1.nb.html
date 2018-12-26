@@ -1764,7 +1764,7 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. 我嘗試用中文寫文章，看看效果如何。</p>
 <p>前言</p>
-<p>维基百科，自由的百科全书</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%BB%BF%E7%9C%9F">维基百科，自由的百科全书</a></p>
 <p>仿真或译作模拟（英语：Simulation），泛指基于实验或训练为目的，将原本的真实或抽象的系统、事务或流程，建立一个模型以表征其关键特性（keycharacteristics）或者行为、功能，予以系统化与公式化，以便进行可对关键特征做出模拟。模型表示系统自身，而仿真表示系统的时序行为。</p>
 <p>计算机试验常被用来研究仿真模型（simulation-model）。仿真也被用于对自然系统或人造系统的科学建模以获取深入理解。仿真可以用来展示可选条件或动作过程的最终结果。仿真也可用在真实系统不能做到的情景，这是由于不可访问（accessible）、太过于危险、不可接受的后果、或者设计了但还未实现、或者压根没有被实现等。 仿真的主要论题是获取相关选定的关键特性与行为的有效信息源，仿真时使用简化的近似或者假定，仿真结果的保真度（fidelity）与有效性。模型验证（verification）与有效性（validation）的过程、协议是学术学习、改进、研究、开发仿真技术的热点，特别是对计算机仿真。</p>
 <p>仿真保真度（Simulation Fidelity）用于描述仿真精度，模拟真实对应物有多近似：</p>
@@ -1774,20 +1774,105 @@ $(document).ready(function () {
 <li>高保真：接近不可辨识或者尽可能地接近真实系统</li>
 </ul>
 <p>在中国，自动控制领域把simulation翻译为仿真，emulation翻译为模拟。例如：核电站仿真、电厂仿真等等。而2002年全国科学技术名词审定委员会公布出版的《计算机科学技术名词》（第二版）[2]把simulation翻译为模拟，emulation翻译为仿真。这造成了极大的混淆。</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
+<p><a href="https://www.youtube.com/watch?v=tvv4IA8PEzw">Simulation in R</a></p>
+<ul>
+<li><p><code>d</code> 函數表示它是關於 <strong>probability density</strong></p></li>
+<li><p><code>r</code> 函數表示它是關於 <strong>random number generation</strong></p></li>
+<li><p><code>p</code> 函數表示它是關於 <strong>probability cumulative distribution</strong></p></li>
+<li><p><code>q</code> 函數表示它是關於 <strong>probability quantile function</strong></p></li>
+</ul>
+<p>現在進入<code>Roger Peng</code>的大作。。。</p>
+<p>Generate Normal Random Variate</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDwtcm5vcm0oMTApXG5gYGAifQ== -->
+<pre class="r"><code>x&lt;-rnorm(10)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueFxuYGBgIn0= -->
+<pre class="r"><code>x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAtMS40OTY4MTI3NyAgMC42NTEwMDk5MSAtMC4yNjY2OTI1NCAgMS4yMDQxNzU0MCAgMC41MjcwNjc3OSAtMS40MjI2MjUwMSAgMC40MzcxNDUxMlxuIFs4XSAtMC4wNTQ3MDQwNSAtMC4wNDc0NzQ3NyAgMS4wOTQyNzU2OVxuIn0= -->
+<pre><code> [1] -1.49681277  0.65100991 -0.26669254  1.20417540  0.52706779 -1.42262501  0.43714512
+ [8] -0.05470405 -0.04747477  1.09427569</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>如果我要10只變數而它們的<code>mean</code>大概是<code>20</code>和<code>standard deviation</code>是<code>2</code>：</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDwtcm5vcm0oMTAsIDIwLCAyKVxuYGBgIn0= -->
+<pre class="r"><code>x&lt;-rnorm(10, 20, 2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueFxuYGBgIn0= -->
+<pre class="r"><code>x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMS44MTgyNyAxOS41NjY0OCAyMC41NTExMyAyMC44MzY1MCAxOS40MDAyOCAyMS42NjUwNyAyNC40MTc2MCAxOC4yMzI2NyAxOS4zODE2MyAxNy41MjU1OFxuIn0= -->
+<pre><code> [1] 21.81827 19.56648 20.55113 20.83650 19.40028 21.66507 24.41760 18.23267 19.38163 17.52558</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeSh4KVxuYGBgIn0= -->
+<pre class="r"><code>summary(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgTWluLiAxc3QgUXUuICBNZWRpYW4gICAgTWVhbiAzcmQgUXUuICAgIE1heC4gXG4gIDE3LjUzICAgMTkuMzkgICAyMC4wNiAgIDIwLjM0ICAgMjEuNDYgICAyNC40MiBcbiJ9 -->
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  17.53   19.39   20.06   20.34   21.46   24.42 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>用<code>set.seed</code>來固定<code>random variable seed</code>以保證<code>reproducibility</code></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0LnNlZWQoMSlcbmBgYCJ9 -->
+<pre class="r"><code>set.seed(1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm5vcm0oNSlcbmBgYCJ9 -->
+<pre class="r"><code>rnorm(5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC0wLjQ0MjY4NjggLTAuNzk4OTExMiAgMC4zNjA5ODA2IC0wLjU2NjA2ODggIDAuMzU5ODUzNlxuIn0= -->
+<pre><code>[1] -0.4426868 -0.7989112  0.3609806 -0.5660688  0.3598536</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm5vcm0oNSlcbmBgYCJ9 -->
+<pre class="r"><code>rnorm(5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxLjA0MTk5MjEgIDAuNDIwNjMyNSAtMC40Mzg0MTQ3IC0wLjE4Nzg2NDAgIDAuOTk5OTk0MlxuIn0= -->
+<pre><code>[1]  1.0419921  0.4206325 -0.4384147 -0.1878640  0.9999942</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0LnNlZWQoMSlcbnJub3JtKDUpXG5gYGAifQ== -->
+<pre class="r"><code>set.seed(1)
+rnorm(5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC0wLjYyNjQ1MzggIDAuMTgzNjQzMyAtMC44MzU2Mjg2ICAxLjU5NTI4MDggIDAuMzI5NTA3OFxuIn0= -->
+<pre><code>[1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>不知那裏出錯！</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiY2hhcHRlciAxIChiYXNlZCBvbiBSb2dlciBQZW5nJ3MgdmlkZW8gaW4geW91VHViZSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIOaIkeWYl+ippueUqOS4reaWh+Wvq+aWh+eroO+8jOeci+eci+aViOaenOWmguS9leOAggoK5YmN6KiACgrnu7Tln7rnmb7np5HvvIzoh6rnlLHnmoTnmb7np5HlhajkuaYKCgrku7/nnJ/miJbor5HkvZzmqKHmi5/vvIjoi7Hor63vvJpTaW11bGF0aW9u77yJ77yM5rOb5oyH5Z+65LqO5a6e6aqM5oiW6K6t57uD5Li655uu55qE77yM5bCG5Y6f5pys55qE55yf5a6e5oiW5oq96LGh55qE57O757uf44CB5LqL5Yqh5oiW5rWB56iL77yM5bu656uL5LiA5Liq5qih5Z6L5Lul6KGo5b6B5YW25YWz6ZSu54m55oCn77yIa2V5Y2hhcmFjdGVyaXN0aWNz77yJ5oiW6ICF6KGM5Li644CB5Yqf6IO977yM5LqI5Lul57O757uf5YyW5LiO5YWs5byP5YyW77yM5Lul5L6/6L+b6KGM5Y+v5a+55YWz6ZSu54m55b6B5YGa5Ye65qih5ouf44CC5qih5Z6L6KGo56S657O757uf6Ieq6Lqr77yM6ICM5Lu/55yf6KGo56S657O757uf55qE5pe25bqP6KGM5Li644CCCgrorqHnrpfmnLror5XpqozluLjooqvnlKjmnaXnoJTnqbbku7/nnJ/mqKHlnovvvIhzaW11bGF0aW9uLW1vZGVs77yJ44CC5Lu/55yf5Lmf6KKr55So5LqO5a+56Ieq54S257O757uf5oiW5Lq66YCg57O757uf55qE56eR5a2m5bu65qih5Lul6I635Y+W5rex5YWl55CG6Kej44CC5Lu/55yf5Y+v5Lul55So5p2l5bGV56S65Y+v6YCJ5p2h5Lu25oiW5Yqo5L2c6L+H56iL55qE5pyA57uI57uT5p6c44CC5Lu/55yf5Lmf5Y+v55So5Zyo55yf5a6e57O757uf5LiN6IO95YGa5Yiw55qE5oOF5pmv77yM6L+Z5piv55Sx5LqO5LiN5Y+v6K6/6Zeu77yIYWNjZXNzaWJsZe+8ieOAgeWkqui/h+S6juWNsemZqeOAgeS4jeWPr+aOpeWPl+eahOWQjuaenOOAgeaIluiAheiuvuiuoeS6huS9hui/mOacquWunueOsOOAgeaIluiAheWOi+agueayoeacieiiq+WunueOsOetieOAgiDku7/nnJ/nmoTkuLvopoHorrrpopjmmK/ojrflj5bnm7jlhbPpgInlrprnmoTlhbPplK7nibnmgKfkuI7ooYzkuLrnmoTmnInmlYjkv6Hmga/mupDvvIzku7/nnJ/ml7bkvb/nlKjnroDljJbnmoTov5HkvLzmiJbogIXlgYflrprvvIzku7/nnJ/nu5PmnpznmoTkv53nnJ/luqbvvIhmaWRlbGl0ee+8ieS4juacieaViOaAp+OAguaooeWei+mqjOivge+8iHZlcmlmaWNhdGlvbu+8ieS4juacieaViOaAp++8iHZhbGlkYXRpb27vvInnmoTov4fnqIvjgIHljY/orq7mmK/lrabmnK/lrabkuaDjgIHmlLnov5vjgIHnoJTnqbbjgIHlvIDlj5Hku7/nnJ/mioDmnK/nmoTng63ngrnvvIznibnliKvmmK/lr7norqHnrpfmnLrku7/nnJ/jgIIKCuS7v+ecn+S/neecn+W6pu+8iFNpbXVsYXRpb24gRmlkZWxpdHnvvInnlKjkuo7mj4/ov7Dku7/nnJ/nsr7luqbvvIzmqKHmi5/nnJ/lrp7lr7nlupTnianmnInlpJrov5HkvLzvvJoKCiog5L2O5L+d55yf77ya5a+557O757uf55qE5pyA5bCP5qih5ouf77yM5o6l5Y+X6L6T5YWl5Lqn55Sf6L6T5Ye6Ciog562J5L+d55yf77ya5a+55Yi65r+A6IO96Ieq5Yqo5ZON5bqU77yM5pyJ6ZmQ57K+5bqmCiog6auY5L+d55yf77ya5o6l6L+R5LiN5Y+v6L6o6K+G5oiW6ICF5bC95Y+v6IO95Zyw5o6l6L+R55yf5a6e57O757ufCgrlnKjkuK3lm73vvIzoh6rliqjmjqfliLbpoobln5/miopzaW11bGF0aW9u57+76K+R5Li65Lu/55yf77yMZW11bGF0aW9u57+76K+R5Li65qih5ouf44CC5L6L5aaC77ya5qC455S156uZ5Lu/55yf44CB55S15Y6C5Lu/55yf562J562J44CC6ICMMjAwMuW5tOWFqOWbveenkeWtpuaKgOacr+WQjeivjeWuoeWumuWnlOWRmOS8muWFrOW4g+WHuueJiOeahOOAiuiuoeeul+acuuenkeWtpuaKgOacr+WQjeivjeOAi++8iOesrOS6jOeJiO+8iVsyXeaKinNpbXVsYXRpb27nv7vor5HkuLrmqKHmi5/vvIxlbXVsYXRpb27nv7vor5HkuLrku7/nnJ/jgILov5npgKDmiJDkuobmnoHlpKfnmoTmt7fmt4bjgIIKCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ3RybCtTaGlmdCtFbnRlciouIAoKYGBge3J9CnBsb3QoY2FycykKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ3RybCtBbHQrSSouCgpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4KClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4K</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiY2hhcHRlciAxIChiYXNlZCBvbiBSb2dlciBQZW5nJ3MgdmlkZW8gaW4geW91VHViZSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIOaIkeWYl+ippueUqOS4reaWh+Wvq+aWh+eroO+8jOeci+eci+aViOaenOWmguS9leOAggoK5YmN6KiACgpb57u05Z+655m+56eR77yM6Ieq55Sx55qE55m+56eR5YWo5LmmXShodHRwczovL3poLndpa2lwZWRpYS5vcmcvd2lraS8lRTQlQkIlQkYlRTclOUMlOUYpCgoK5Lu/55yf5oiW6K+R5L2c5qih5ouf77yI6Iux6K+t77yaU2ltdWxhdGlvbu+8ie+8jOazm+aMh+WfuuS6juWunumqjOaIluiuree7g+S4uuebrueahO+8jOWwhuWOn+acrOeahOecn+WunuaIluaKveixoeeahOezu+e7n+OAgeS6i+WKoeaIlua1geeoi++8jOW7uueri+S4gOS4quaooeWei+S7peihqOW+geWFtuWFs+mUrueJueaAp++8iGtleWNoYXJhY3RlcmlzdGljc++8ieaIluiAheihjOS4uuOAgeWKn+iDve+8jOS6iOS7peezu+e7n+WMluS4juWFrOW8j+WMlu+8jOS7peS+v+i/m+ihjOWPr+WvueWFs+mUrueJueW+geWBmuWHuuaooeaLn+OAguaooeWei+ihqOekuuezu+e7n+iHqui6q++8jOiAjOS7v+ecn+ihqOekuuezu+e7n+eahOaXtuW6j+ihjOS4uuOAggoK6K6h566X5py66K+V6aqM5bi46KKr55So5p2l56CU56m25Lu/55yf5qih5Z6L77yIc2ltdWxhdGlvbi1tb2RlbO+8ieOAguS7v+ecn+S5n+iiq+eUqOS6juWvueiHqueEtuezu+e7n+aIluS6uumAoOezu+e7n+eahOenkeWtpuW7uuaooeS7peiOt+WPlua3seWFpeeQhuino+OAguS7v+ecn+WPr+S7peeUqOadpeWxleekuuWPr+mAieadoeS7tuaIluWKqOS9nOi/h+eoi+eahOacgOe7iOe7k+aenOOAguS7v+ecn+S5n+WPr+eUqOWcqOecn+Wunuezu+e7n+S4jeiDveWBmuWIsOeahOaDheaZr++8jOi/meaYr+eUseS6juS4jeWPr+iuv+mXru+8iGFjY2Vzc2libGXvvInjgIHlpKrov4fkuo7ljbHpmanjgIHkuI3lj6/mjqXlj5fnmoTlkI7mnpzjgIHmiJbogIXorr7orqHkuobkvYbov5jmnKrlrp7njrDjgIHmiJbogIXljovmoLnmsqHmnInooqvlrp7njrDnrYnjgIIg5Lu/55yf55qE5Li76KaB6K666aKY5piv6I635Y+W55u45YWz6YCJ5a6a55qE5YWz6ZSu54m55oCn5LiO6KGM5Li655qE5pyJ5pWI5L+h5oGv5rqQ77yM5Lu/55yf5pe25L2/55So566A5YyW55qE6L+R5Ly85oiW6ICF5YGH5a6a77yM5Lu/55yf57uT5p6c55qE5L+d55yf5bqm77yIZmlkZWxpdHnvvInkuI7mnInmlYjmgKfjgILmqKHlnovpqozor4HvvIh2ZXJpZmljYXRpb27vvInkuI7mnInmlYjmgKfvvIh2YWxpZGF0aW9u77yJ55qE6L+H56iL44CB5Y2P6K6u5piv5a2m5pyv5a2m5Lmg44CB5pS56L+b44CB56CU56m244CB5byA5Y+R5Lu/55yf5oqA5pyv55qE54Ot54K577yM54m55Yir5piv5a+56K6h566X5py65Lu/55yf44CCCgrku7/nnJ/kv53nnJ/luqbvvIhTaW11bGF0aW9uIEZpZGVsaXR577yJ55So5LqO5o+P6L+w5Lu/55yf57K+5bqm77yM5qih5ouf55yf5a6e5a+55bqU54mp5pyJ5aSa6L+R5Ly877yaCgoqIOS9juS/neecn++8muWvueezu+e7n+eahOacgOWwj+aooeaLn++8jOaOpeWPl+i+k+WFpeS6p+eUn+i+k+WHugoqIOetieS/neecn++8muWvueWIuua/gOiDveiHquWKqOWTjeW6lO+8jOaciemZkOeyvuW6pgoqIOmrmOS/neecn++8muaOpei/keS4jeWPr+i+qOivhuaIluiAheWwveWPr+iDveWcsOaOpei/keecn+Wunuezu+e7nwoK5Zyo5Lit5Zu977yM6Ieq5Yqo5o6n5Yi26aKG5Z+f5oqKc2ltdWxhdGlvbue/u+ivkeS4uuS7v+ecn++8jGVtdWxhdGlvbue/u+ivkeS4uuaooeaLn+OAguS+i+Wmgu+8muaguOeUteermeS7v+ecn+OAgeeUteWOguS7v+ecn+etieetieOAguiAjDIwMDLlubTlhajlm73np5HlrabmioDmnK/lkI3or43lrqHlrprlp5TlkZjkvJrlhazluIPlh7rniYjnmoTjgIrorqHnrpfmnLrnp5HlrabmioDmnK/lkI3or43jgIvvvIjnrKzkuozniYjvvIlbMl3miopzaW11bGF0aW9u57+76K+R5Li65qih5ouf77yMZW11bGF0aW9u57+76K+R5Li65Lu/55yf44CC6L+Z6YCg5oiQ5LqG5p6B5aSn55qE5re35reG44CCCgpbU2ltdWxhdGlvbiBpbiBSXShodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXR2djRJQThQRXp3KQoKKiBgZGAg5Ye95pW46KGo56S65a6D5piv6Zec5pa8ICoqcHJvYmFiaWxpdHkgZGVuc2l0eSoqCgoqIGByYCDlh73mlbjooajnpLrlroPmmK/pl5zmlrwgKipyYW5kb20gbnVtYmVyIGdlbmVyYXRpb24qKgoKKiBgcGAg5Ye95pW46KGo56S65a6D5piv6Zec5pa8ICoqcHJvYmFiaWxpdHkgY3VtdWxhdGl2ZSBkaXN0cmlidXRpb24qKgoKKiBgcWAg5Ye95pW46KGo56S65a6D5piv6Zec5pa8ICoqcHJvYmFiaWxpdHkgcXVhbnRpbGUgZnVuY3Rpb24qKgoK54++5Zyo6YCy5YWlYFJvZ2VyIFBlbmdg55qE5aSn5L2c44CC44CC44CCCgpHZW5lcmF0ZSBOb3JtYWwgUmFuZG9tIFZhcmlhdGUKCgpgYGB7cn0KeDwtcm5vcm0oMTApCmBgYAoKYGBge3J9CngKYGBgCgrlpoLmnpzmiJHopoExMOWPquiuiuaVuOiAjOWug+WAkeeahGBtZWFuYOWkp+amguaYr2AyMGDlkoxgc3RhbmRhcmQgZGV2aWF0aW9uYOaYr2AyYO+8mgoKYGBge3J9Cng8LXJub3JtKDEwLCAyMCwgMikKYGBgCgpgYGB7cn0KeApgYGAKCmBgYHtyfQpzdW1tYXJ5KHgpCmBgYAoK55SoYHNldC5zZWVkYOS+huWbuuWummByYW5kb20gdmFyaWFibGUgc2VlZGDku6Xkv53orYlgcmVwcm9kdWNpYmlsaXR5YAoKYGBge3J9CnNldC5zZWVkKDEpCmBgYAoKYGBge3J9CnJub3JtKDUpCmBgYAoKYGBge3J9CnJub3JtKDUpCmBgYAoKYGBge3J9CnNldC5zZWVkKDEpCnJub3JtKDUpCmBgYAoK5LiN55+l6YKj6KOP5Ye66Yyv77yBCgo=</div>
 
 
 

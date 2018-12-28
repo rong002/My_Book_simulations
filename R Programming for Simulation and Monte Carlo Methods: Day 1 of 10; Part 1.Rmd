@@ -1,0 +1,22 @@
+---
+title: "R Programming for Simulation and Monte Carlo Methods: Day 1 of 10; Part 1"
+output: html_notebook
+---
+[R Programming for Simulation and Monte Carlo Methods: Day 1 of 10; Part 1](https://www.youtube.com/watch?v=-eYyN0YoFng)
+
+
+```{r}
+seq(0,1,.1)
+```
+
+詳程：
+
+[R语言中seq函数的用法](https://blog.csdn.net/jiluben/article/details/40024607)
+
+多點介
+
+```{r}
+seq(0,1,length=11)
+
+```
+
